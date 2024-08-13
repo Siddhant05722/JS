@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h1>This is first project</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Siddhant");
+    // }, 5000);
+
+
+    const saySid = function(){
+        console.log("Siddhant");
+    }
+
+    setTimeout(saySid, 3000)
+
+    // document.querySelector('h1').innerHTML = "hey Buddy"
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "hey Buddy"
+    }
+    // setTimeout(changeText, 3000)
+
+    const changeMe = setTimeout(changeText, 3000)
+
+     document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("stopped")
+     })
+</script>
+</html>
